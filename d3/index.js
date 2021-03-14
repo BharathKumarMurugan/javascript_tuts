@@ -108,3 +108,248 @@ const w = 500;
 const h = 100;
 d3.select("body").append("svg").style("width", w).style("height", h);
 */
+
+/**
+ * Display Shapes with SVG
+ */
+/*
+const w = 500,
+  h = 100;
+d3.select("body")
+  .append("svg")
+  .attr("width", w)
+  .attr("height", h)
+  .append("rect")
+  .attr("width", 25)
+  .attr("height", 100)
+  .attr("x", 0)
+  .attr("y", 0);
+*/
+
+/**
+ * Create a Bar for Each Data Point in the Set
+ */
+/*
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+const w = 500,
+  h = 100;
+const svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
+
+svg
+  .selectAll("rect")
+  .data(dataset)
+  .enter()
+  .append("rect")
+  .attr("x", 0)
+  .attr("y", 0)
+  .attr("width", 25)
+  .attr("height", 100);
+*/
+
+/**
+ * Dynamically Set the Coordinates for Each Bar
+ */
+/*
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+const w = 500,
+  h = 100;
+const svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
+
+svg
+  .selectAll("rect")
+  .data(dataset)
+  .enter()
+  .append("rect")
+  .attr("x", (d, i) => {
+    return i * 30;
+  })
+  .attr("y", 0)
+  .attr("width", 25)
+  .attr("height", 100);
+*/
+
+/**
+ * Dynamically Change the Height of Each Bar
+ */
+/*const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+const w = 500,
+  h = 100;
+const svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
+
+svg
+  .selectAll("rect")
+  .data(dataset)
+  .enter()
+  .append("rect")
+  .attr("x", (d, i) => {
+    return i * 30;
+  })
+  .attr("y", 0)
+  .attr("width", 25)
+  .attr("height", (d, i) => d * 3);
+*/
+
+/**
+ * Invert SVG Elements
+ */
+/*
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+const w = 500,
+  h = 100;
+const svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
+
+svg
+  .selectAll("rect")
+  .data(dataset)
+  .enter()
+  .append("rect")
+  .attr("x", (d, i) => i * 30)
+  .attr("y", (d, i) => h - 3 * d)
+  .attr("width", 25)
+  .attr("height", (d, i) => d * 3);
+*/
+
+/**
+ * Change the Color of an SVG Element
+ */
+/*
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+const w = 500,
+  h = 100;
+const svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
+
+svg
+  .selectAll("rect")
+  .data(dataset)
+  .enter()
+  .append("rect")
+  .attr("x", (d, i) => i * 30)
+  .attr("y", (d, i) => h - 3 * d)
+  .attr("width", 25)
+  .attr("height", (d, i) => d * 3)
+  .attr("fill", "navy");
+*/
+
+/**
+ * Add Labels to D3 Elements
+ */
+/*
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+const w = 500,
+  h = 100;
+const svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
+svg
+  .selectAll("rect")
+  .data(dataset)
+  .enter()
+  .append("rect")
+  .attr("width", 25)
+  .attr("height", (d, i) => d * 3)
+  .attr("x", (d, i) => i * 30)
+  .attr("y", (d, i) => h - 3 * d)
+  .attr("fill", "navy");
+
+svg
+  .selectAll("text")
+  .data(dataset)
+  .enter()
+  .append("text")
+  .attr("x", (d, i) => i * 30)
+  .attr("y", (d, i) => h - 3 * d - 3)
+  .text((d, i) => d);
+*/
+
+/**
+ * Style D3 Labels
+ */
+/*
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+const w = 500,
+  h = 100;
+const svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
+svg
+  .selectAll("rect")
+  .data(dataset)
+  .enter()
+  .append("rect")
+  .attr("width", 25)
+  .attr("height", (d, i) => d * 3)
+  .attr("x", (d, i) => i * 30)
+  .attr("y", (d, i) => h - 3 * d)
+  .attr("fill", "navy");
+
+svg
+  .selectAll("text")
+  .data(dataset)
+  .enter()
+  .append("text")
+  .attr("x", (d, i) => i * 30)
+  .attr("y", (d, i) => h - 3 * d - 3)
+  .text((d, i) => d)
+  .style("font-size", "12px")
+  .attr("fill", "red");
+*/
+
+/**
+ * Add a Hover Effect to a D3 Element
+ */
+/*
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+const w = 500,
+  h = 100;
+const svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
+svg
+  .selectAll("rect")
+  .data(dataset)
+  .enter()
+  .append("rect")
+  .attr("width", 25)
+  .attr("height", (d, i) => d * 3)
+  .attr("x", (d, i) => i * 30)
+  .attr("y", (d, i) => h - 3 * d)
+  .attr("fill", "navy")
+  .attr("class", "hovereffect");
+
+svg
+  .selectAll("text")
+  .data(dataset)
+  .enter()
+  .append("text")
+  .attr("x", (d, i) => i * 30)
+  .attr("y", (d, i) => h - 3 * d - 3)
+  .text((d, i) => d)
+  .style("font-size", "12px")
+  .attr("fill", "red");
+*/
+
+/**
+ * Add a Tooltip to a D3 Element
+ */
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+const w = 500,
+  h = 100;
+const svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
+svg
+  .selectAll("rect")
+  .data(dataset)
+  .enter()
+  .append("rect")
+  .attr("width", 25)
+  .attr("height", (d, i) => d * 3)
+  .attr("x", (d, i) => i * 30)
+  .attr("y", (d, i) => h - 3 * d)
+  .attr("fill", "navy")
+  .attr("class", "hovereffect")
+  .append("title")
+  .text((d, i) => d);
+
+svg
+  .selectAll("text")
+  .data(dataset)
+  .enter()
+  .append("text")
+  .attr("x", (d, i) => i * 30)
+  .attr("y", (d, i) => h - 3 * d - 3)
+  .text((d, i) => d)
+  .style("font-size", "12px")
+  .attr("fill", "red");
