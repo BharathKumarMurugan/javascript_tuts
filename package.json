@@ -1,0 +1,22 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ObjectTraverse.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.2.4"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1008.0",
+    "axios": "^0.24.0",
+    "base62": "^2.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

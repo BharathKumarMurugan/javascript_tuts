@@ -1,0 +1,12 @@
+{
+  "name": "uploadtos3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -e \"(async () => console.log(await require('./index').handler({})))();\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
